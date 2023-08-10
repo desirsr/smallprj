@@ -1,0 +1,14 @@
+<div class="container">
+    <textarea></textarea>
+    <button>Speak</button>
+</div>
+
+<script>
+    const text = document.querySelector('textarea');
+    const button = document.querySelector('button');
+
+    button.addEventListener('click' , () => {
+        const utterance = new SpeechSynthesisUtterance(text.value);
+        speechSynthesis.speak(utterance);
+    })
+</script>
